@@ -1,22 +1,16 @@
 <html>
-
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-
 <body>
-
 	<script>
 		var currentTab;
 
 		function load() {
-			document.getElementById("iweb" + currentTab)
-				.src = document.getElementById("newaddress")
+			document.getElementById('iweb' + currentTab)
+				.src = document.getElementById('newaddress')
 				.value;
 		}
 
 		function fullscreen() {
-			var ifrm = document.getElementById("iweb" + currentTab);
+			var ifrm = document.getElementById('iweb' + currentTab);
 			if (ifrm.requestFullscreen) {
 				ifrm.requestFullscreen();
 			} else {
@@ -25,10 +19,9 @@
 		}
 
 		function close() {
-			document.getElementsByClassName("tabcontent")[currentTab].style.display = 'none';
+			document.getElementsByClassName('tabcontent')[currentTab].style.display = 'none';
 		}
 	</script>
-
 	<style>
 		body {
 			font-family: "Lato", sans-serif;
@@ -124,7 +117,6 @@
 			box-shadow: 0 0 5px 1px #969696;
 		}
 	</style>
-
 	<div class="tab">
 		Address:
 		<input type="text" id="newaddress"></input>
@@ -134,55 +126,45 @@
 		<button class="tablinks" onclick="openTab(event, 'tab2')" id="tabb2">Tab 2</button>
 		<button class="tablinks" onclick="openTab(event, 'tab3')" id="tabb3">Tab 3</button>
 	</div>
-
 	<div id="tab1" class="tabcontent">
 		<span onclick="close()" class="topright">[x]</span>
 		<span onclick="fullscreen()" class="topright2">[+]</span>
 		<iframe src="" height="500" width="1000" id="iweb1" allowfullscreen></iframe>
 	</div>
-
 	<div id="tab2" class="tabcontent">
 		<span onclick="close()" class="topright">[x]</span>
 		<span onclick="fullscreen()" class="topright2">[+]</span>
 		<iframe src="" height="500" width="1000" id="iweb2" allowfullscreen></iframe>
 	</div>
-
 	<div id="tab3" class="tabcontent">
 		<span onclick="close()" class="topright">[x]</span>
 		<span onclick="fullscreen()" class="topright2">[+]</span>
 		<iframe src="" height="500" width="1000" id="iweb3" allowfullscreen></iframe>
 	</div>
-
 	<script>
 		function openTab(evt, cityName) {
 			var i, tabcontent, tablinks;
-			tabcontent = document.getElementsByClassName("tabcontent");
+			tabcontent = document.getElementsByClassName('tabcontent');
 			for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
+				tabcontent[i].style.display = 'none';
 			}
-			tablinks = document.getElementsByClassName("tablinks");
+			tablinks = document.getElementsByClassName('tablinks');
 			for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace(" active", "");
+				tablinks[i].className = tablinks[i].className.replace(' active', '');
 			}
 			document.getElementById(cityName)
-				.style.display = "block";
+				.style.display = 'block';
 
 			currentTab = parseInt(cityName.match(/\d+/g));
-			evt.currentTarget.className += " active";
+			evt.currentTarget.className += ' active';
 		}
-
-		$("#newaddress")
-			.keyup(function(event) {
-				if (event.keyCode == 13) {
-					$("#loadnew")
-						.click();
-				}
-			});
-
-		document.getElementById("tabb1")
-			.click();
+		document.getElementById('newaddress').addEventListener('keyup', function(event) {
+			if (event.keyCode == 13) {
+				document.getElementById('loadnew').click();
+			}
+		});
+		document.getElementById('tabb1').click();
 	</script>
 
 </body>
-
 </html>
