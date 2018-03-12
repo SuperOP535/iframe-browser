@@ -5,22 +5,13 @@
 <body>
 	<script>
 		var currentTab;
-
 		function load() {
-			document.getElementById('iweb' + currentTab)
-				.src = document.getElementById('newaddress')
-				.value;
+			document.getElementById('iweb' + currentTab).src = document.getElementById('newaddress').value;
 		}
-
 		function fullscreen() {
-			var ifrm = document.getElementById('iweb' + currentTab);
-			if (ifrm.requestFullscreen) {
-				ifrm.requestFullscreen();
-			} else {
-				ifrm.webkitRequestFullScreen();
-			}
+			var iframe = document.getElementById('iweb' + currentTab);
+			iframe.requestFullscreen || iframe.webkitRequestFullscreen || iframe.mozRequestFullScreen || iframe.msRequestFullscreen;
 		}
-
 		function close() {
 			document.getElementsByClassName('tabcontent')[currentTab].style.display = 'none';
 		}
@@ -73,6 +64,5 @@
 		});
 		document.getElementById('tabb1').click();
 	</script>
-
 </body>
 </html>
