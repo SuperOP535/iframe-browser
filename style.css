@@ -1,74 +1,58 @@
-body {
-			font-family: "Lato", sans-serif;
-		}
-		/* Style the tab */
-		div.tab {
-			overflow: hidden;
-			border: 1px solid #ccc;
-			background-color: #f1f1f1;
-		}
-		/* Style the buttons inside the tab */
-		.tablinks {
-			background-color: inherit;
-			float: left;
-			border: none;
-			outline: none;
-			cursor: pointer;
-			padding: 8px 14px;
-			transition: 0.3s;
-			font-size: 17px;
-		}
-		/* Change background color of buttons on hover */
-		.tablinks:hover {
-			background-color: #ddd;
-		}
-		/* Create an active/current tablink class */
-		.tablinks.active {
-			background-color: #ccc;
-		}
-		.loadbutton {
-			background-color: inherit;
-			border: none;
-			outline: none;
-			cursor: pointer;
-			padding: 8px 14px;
-			transition: 0.3s;
-			font-size: 17px;
-		}
-		.loadbutton:hover {
-			background-color: #ddd;
-		}
-		/* Style the tab content */
-		.tabcontent {
-			display: none;
-			padding: 6px 12px;
-			border: 1px solid #ccc;
-			border-top: none;
-		}
-		/* Style the close button */
-		.topright {
-			float: right;
-			cursor: pointer;
-			font-size: 20px;
-		}
-		.topright:hover {
-			color: red;
-		}
-		.topright2 {
-			float: right;
-			cursor: pointer;
-			font-size: 20px;
-		}
-		.topright2:hover {
-			color: blue;
-		}
-		input[type="text"] {
-			padding: 10px;
-			border: solid 1px #dcdcdc;
-			transition: box-shadow 0.3s, border 0.3s;
-		}
-		input[type="text"]:focus,
-		input[type="text"].focus {
-			border: solid 1px #707070;
-			box-shadow: 0 0 5px 1px #969696;
-		}
+body{
+    font-family:Lato,sans-serif
+}
+div.tab{
+    overflow:hidden;
+    border:1px solid #ccc;
+    background-color:#f1f1f1
+}
+.loadbutton,.tablinks{
+    border:none;
+    outline:0;
+    cursor:pointer;
+    padding:8px 14px;
+    transition:.3s;
+    font-size:17px
+}
+.tablinks{
+    background-color:inherit;
+    float:left
+}
+.tablinks:hover{
+    background-color:#ddd
+}
+.tablinks.active{
+    background-color:#ccc
+}
+.loadbutton{
+    background-color:inherit
+}
+.topright,.topright2{
+    float:right;
+    cursor:pointer;
+    font-size:20px
+}
+.loadbutton:hover{
+    background-color:#ddd
+}
+.tabcontent{
+    display:none;
+    padding:6px 12px;
+    border:1px solid #ccc;
+    border-top:none
+}
+.topright:hover{
+    color:red
+}
+.topright2:hover{
+    color:#00f
+}
+input[type=text]{
+    padding:10px;
+    border:1px solid #dcdcdc;
+    transition:box-shadow .3s,border .3s
+}
+input[type=text].focus,input[type=text]:focus{
+    border:1px solid #707070;
+    box-shadow:0 0 5px 1px #969696
+}
