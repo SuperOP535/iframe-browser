@@ -10,7 +10,12 @@
 		}
 		function fullscreen() {
 			var iframe = document.getElementById('iweb' + currentTab);
-			iframe.requestFullscreen || iframe.webkitRequestFullscreen || iframe.mozRequestFullScreen || iframe.msRequestFullscreen;
+			var fs = iframe.requestFullscreen || iframe.webkitRequestFullscreen || iframe.mozRequestFullScreen || iframe.msRequestFullscreen;
+			if(!fs) {
+        alert('Your browser does not seem to support fullscreen');
+      } else {
+        fs();
+      }
 		}
 		function close() {
 			document.getElementsByClassName('tabcontent')[currentTab].style.display = 'none';
