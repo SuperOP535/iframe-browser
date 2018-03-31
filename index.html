@@ -9,13 +9,25 @@
   <div class="tab">
     Address:&nbsp;<input type="text" id="address"></input>
     <button onclick="load()" class="btn" id="load">Load</button><br>
-    <button class="tablinks" onclick="openTab(event, 'tab1')" id="tabb1">Tab 1</button>
-    <button class="tablinks" onclick="openTab(event, 'tab2')" id="tabb2">Tab 2</button>
-    <button class="tablinks" onclick="openTab(event, 'tab3')" id="tabb3">Tab 3</button>
+    <button class="btn tablinks" onclick="openTab(event, 'tab1')" id="tabb1">Tab 1</button>
+    <button class="btn tablinks" onclick="openTab(event, 'tab2')" id="tabb2">Tab 2</button>
+    <button class="btn tablinks" onclick="openTab(event, 'tab3')" id="tabb3">Tab 3</button>
   </div>
-  <div id="tab1" class="tabcontent"><span onclick="close()" class="topright">[x]</span><span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span><iframe src="" height="500" width="1000" id="iweb1" allowfullscreen></iframe></div>
-  <div id="tab2" class="tabcontent"><span onclick="close()" class="topright">[x]</span><span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span><iframe src="" height="500" width="1000" id="iweb2" allowfullscreen></iframe></div>
-  <div id="tab3" class="tabcontent"><span onclick="close()" class="topright">[x]</span><span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span><iframe src="" height="500" width="1000" id="iweb3" allowfullscreen></iframe></div>
+  <div id="tab1" class="tabcontent">
+    <span onclick="close()" class="topright">[x]</span>
+    <span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span>
+    <iframe src="" height="500" width="1000" id="iweb1" allowfullscreen></iframe>
+  </div>
+  <div id="tab2" class="tabcontent">
+    <span onclick="close()" class="topright">[x]</span>
+    <span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span>
+    <iframe src="" height="500" width="1000" id="iweb2" allowfullscreen></iframe>
+  </div>
+  <div id="tab3" class="tabcontent">
+    <span onclick="close()" class="topright">[x]</span>
+    <span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span>
+    <iframe src="" height="500" width="1000" id="iweb3" allowfullscreen></iframe>
+  </div>
 </body>
 
 </html>
