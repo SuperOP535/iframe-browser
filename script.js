@@ -27,12 +27,14 @@ function openTab(evt, cityName) {
   evt.currentTarget.className += ' active';
 }
 
-byId('address').addEventListener('keyup', function (event) {
-  if (event.keyCode == 13) {
-    document.getElementById('load').click();
-  }
-});
-byId('tab1').click();
+window.onload = function() {
+  byId('address').addEventListener('keyup', function (event) {
+    if (event.keyCode == 13) {
+      document.getElementById('load').click();
+    }
+  });
+  byId('tab1').click();
+}
 
 function load() {
   byId('iweb' + currentTab).src = byId('address').value;
