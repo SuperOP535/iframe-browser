@@ -9,11 +9,11 @@
   <div class="tab">
     Address:&nbsp;<input type="text" id="address"></input>
     <button onclick="load()" class="btn" id="load">Load</button><br>
-    <button class="btn tablinks" onclick="openTab(1)" id="tabb1">Tab 1</button>
+    <button class="btn tablinks active" onclick="openTab(1)" id="tabb1">Tab 1</button>
     <button class="btn tablinks" onclick="openTab(2)" id="tabb2">Tab 2</button>
     <button class="btn tablinks" onclick="openTab(3)" id="tabb3">Tab 3</button>
   </div>
-  <div id="tab1" class="tabcontent">
+  <div id="tab1" class="tabcontent" style="display:block">
     <span onclick="close()" class="topright">[x]</span>
     <span onclick="fullscreen(byId('iweb'+currentTab))" class="topright2">[+]</span>
     <iframe src="" height="500" width="1000" id="iweb1" allowfullscreen></iframe>
