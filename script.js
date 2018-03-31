@@ -10,7 +10,7 @@ function fullscreen(elm) {
   (elm.requestFullscreen ? elm.requestFullscreen() : (elm.webkitRequestFullscreen ? elm.webkitRequestFullscreen() : (elm.mozRequestFullScreen ? elm.mozRequestFullScreen() : (elm.msRequestFullscreen ? elm.msRequestFullscreen() : alert('Your browser does not support fullscreen!')))))
 }
 
-var currentTab;
+var currentTab = 1;
 
 function openTab(id) {
   for (var i = 0, tabcontent = byClass('tabcontent'); i < tabcontent.length; i++) {
@@ -31,7 +31,6 @@ window.onload = function() {
       document.getElementById('load').click();
     }
   });
-  openTab(1);
 }
 
 function load() {
