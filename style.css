@@ -6,7 +6,7 @@ div.tab{
     border:1px solid #ccc;
     background-color:#f1f1f1
 }
-.loadbutton,.tablinks{
+.btn{
     border:none;
     outline:0;
     cursor:pointer;
