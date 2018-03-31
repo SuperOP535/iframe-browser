@@ -19,9 +19,10 @@ function openTab(id) {
   for (var i = 0, tablinks = byClass('tablinks'); i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(' active', '');
   }
-  elm.style.display = 'block';
+  var tab = byId('tab'+id);
+  tab.style.display = 'block';
   currentTab = id;
-  byId('tab'+id).className += ' active';
+  tab.className += ' active';
 }
 
 window.onload = function() {
