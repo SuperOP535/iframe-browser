@@ -12,19 +12,16 @@ function fullscreen(elm) {
 
 var currentTab;
 
-function openTab(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = byClass('tabcontent');
-  for (i = 0; i < tabcontent.length; i++) {
+function openTab(id) {
+  for (var i = 0, tabcontent = byClass('tabcontent'); i < tabcontent.length; i++) {
     tabcontent[i].style.display = 'none';
   }
-  tablinks = byClass('tablinks');
-  for (i = 0; i < tablinks.length; i++) {
+  for (var i = 0, tablinks = byClass('tablinks'); i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(' active', '');
   }
-  byId(cityName).style.display = 'block';
-  currentTab = parseInt(cityName.match(/\d+/g));
-  evt.currentTarget.className += ' active';
+  elm.style.display = 'block';
+  currentTab = id;
+  byId('tab'+id).className += ' active';
 }
 
 window.onload = function() {
@@ -33,7 +30,7 @@ window.onload = function() {
       document.getElementById('load').click();
     }
   });
-  byId('tab1').click();
+  openTab(1);
 }
 
 function load() {
