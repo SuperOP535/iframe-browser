@@ -26,15 +26,16 @@ function openTab(evt, cityName) {
   currentTab = parseInt(cityName.match(/\d+/g));
   evt.currentTarget.className += ' active';
 }
-byId('newaddress').addEventListener('keyup', function (event) {
+
+byId('address').addEventListener('keyup', function (event) {
   if (event.keyCode == 13) {
-    document.getElementById('loadnew').click();
+    document.getElementById('load').click();
   }
 });
-byId('tabb1').click();
+byId('tab1').click();
 
 function load() {
-  byId('iweb' + currentTab).src = byId('newaddress').value;
+  byId('iweb' + currentTab).src = byId('address').value;
 }
 
 function close() {
