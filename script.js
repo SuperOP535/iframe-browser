@@ -19,10 +19,9 @@ function openTab(id) {
   for (var i = 0, tablinks = byClass('tablinks'); i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(' active', '');
   }
-  var tab = byId('tabb'+id);
-  tab.style.display = 'block';
+  byId('tab'+id).style.display = 'block';
   currentTab = id;
-  tab.className += ' active';
+  byId('tabb'+id).className += ' active';
 }
 
 window.onload = function() {
