@@ -14,11 +14,11 @@ var currentTab = 1;
 var currentTabs = 1;
 
 function openTab(id) {
-  for (var i = 0, tabcontent = byClass('tabcontent'); i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none';
+  for (var i = 0, tabcontents = byId('tabs').children; i < tabcontents.length; i++) {
+    tabcontents[i].style.display = 'none';
   }
-  for (var i = 0, tablinks = byClass('tablinks'); i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(' active', '');
+  for (var i = 0, tabbtns = byClass('tabbtns'); i < tabbtns.length; i++) {
+    tabbtns[i].className = tabbtns[i].className.replace(' active', '');
   }
   byId('tab'+id).style.display = 'block';
   currentTab = id;
