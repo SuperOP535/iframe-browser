@@ -37,5 +37,5 @@ function load() {
 }
 
 function close() {
-  byClass('tabcontent')[currentTab].style.display = 'none';
+  byId('tab' + currentTab).style.display = 'none';
 }
