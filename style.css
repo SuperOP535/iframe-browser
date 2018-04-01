@@ -18,22 +18,16 @@ div.tab{
     background-color:inherit;
     float:left
 }
-.tablinks:hover{
+.btn:hover{
     background-color:#ddd
 }
-.tablinks.active{
+.btn.active{
     background-color:#ccc
-}
-.loadbutton{
-    background-color:inherit
 }
 .topright,.topright2{
     float:right;
     cursor:pointer;
     font-size:20px
-}
-.loadbutton:hover{
-    background-color:#ddd
 }
 .tabcontent{
     display:none;
@@ -42,7 +36,7 @@ div.tab{
     border-top:none
 }
 .topright:hover{
-    color:red
+    color:red;
 }
 .topright2:hover{
     color:#00f
