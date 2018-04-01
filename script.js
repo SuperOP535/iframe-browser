@@ -17,7 +17,7 @@ function openTab(id) {
   for (var i = 0, tabcontents = byId('tabs').children; i < tabcontents.length; i++) {
     tabcontents[i].style.display = 'none';
   }
-  for (var i = 0, tabbtns = byClass('tabbtns'); i < tabbtns.length; i++) {
+  for (var i = 0, tabbtns = byId('tabbtns').children; i < tabbtns.length; i++) {
     tabbtns[i].className = tabbtns[i].className.replace(' active', '');
   }
   byId('tab'+id).style.display = 'block';
