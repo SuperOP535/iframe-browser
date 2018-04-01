@@ -53,12 +53,12 @@ function newtab() {
   div.id = 'tab'+t;
   div.className = 'tabcontent';
   div.style.display = 'none';
-  var closeBtn = document.createElement('button');
+  var closeBtn = document.createElement('span');
   closeBtn.onclick = 'close()';
   closeBtn.className = 'topright';
   closeBtn.innerHTML = '[x]';
   div.appendChild(closeBtn);
-  var fullBtn = document.createElement('button');
+  var fullBtn = document.createElement('span');
   fullBtn.onclick = 'close()';
   fullBtn.className = 'topright2';
   fullBtn.innerHTML = '[+]';
