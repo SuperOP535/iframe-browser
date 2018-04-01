@@ -46,7 +46,7 @@ function newtab() {
   var t = ++currentTab;
   var tabbtn = document.createElement('button');
   tabbtn.className = 'btn';
-  tabbtn.onclick = 'openTab('+t+')';
+  tabbtn.setAttribute('onclick', 'openTab('+t+')');
   tabbtn.id = 'tabb'+t;
   tabbtn.innerHTML = 'Tab '+t;
   
