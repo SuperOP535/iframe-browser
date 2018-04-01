@@ -47,6 +47,7 @@ function newtab() {
   tabbtn.className = 'btn';
   tabbtn.onclick = 'openTab('+t+')';
   tabbtn.id = 'tabb'+t;
+  tabbtn.innerHTML = 'Tab '+t;
   
   var div = document.createElement('div');
   div.id = 'tab'+t;
@@ -72,5 +73,6 @@ function newtab() {
   
   byId('tabbtns').appendChild(tabbtn);
   byId('tabs').appendChild(div);
+  openTab(t);
   
 }
