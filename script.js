@@ -11,6 +11,7 @@ function fullscreen(elm) {
 }
 
 var currentTab = 1;
+var currentTabs = 1;
 
 function openTab(id) {
   for (var i = 0, tabcontent = byClass('tabcontent'); i < tabcontent.length; i++) {
@@ -38,4 +39,38 @@ function load() {
 
 function close() {
   byId('tab' + currentTab).style.display = 'none';
+}
+
+function newtab() {
+  var t = ++currentTab;
+  var tabbtn = document.createElement('button');
+  tabbtn.className = 'btn';
+  tabbtn.onclick = 'openTab('+t+')';
+  tabbtn.id = 'tabb'+t;
+  
+  var div = document.createElement('div');
+  div.id = 'tab'+t;
+  div.className = 'tabcontent';
+  div.style.display = 'none';
+  var closeBtn = document.createElement('button');
+  closeBtn.onclick = 'close()';
+  closeBtn.className = 'topright';
+  closeBtn.innerHTML = '[x]';
+  div.appendChild(closeBtn);
+  var fullBtn = document.createElement('button');
+  fullBtn.onclick = 'close()';
+  fullBtn.className = 'topright2';
+  fullBtn.innerHTML = '[+]';
+  div.appendChild(fullBtn);
+  var iframe = document.createElement('iframe');
+  iframe.src = '';
+  iframe.height = 500;
+  iframe.width = 1000;
+  iframe.id = 'iweb'+t;
+  iframe.allowFullscreen = true;
+  div.appendChild(iframe);
+  
+  byId('tabbtns').appendChild(tabbtn);
+  byId('tabs').appendChild(div);
+  
 }
