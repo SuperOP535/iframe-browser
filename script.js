@@ -38,7 +38,8 @@ function load() {
 }
 
 function close() {
-  byId('tab' + currentTab).style.display = 'none';
+  byId('tabb'+currentTab).parentNode.removeChild(byId('tab'+currentTab));
+  byId('tab'+currentTab).parentNode.removeChild(byId('tab'+currentTab));
 }
 
 function newtab() {
