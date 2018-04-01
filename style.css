@@ -7,16 +7,13 @@ div.tab{
     background-color:#f1f1f1
 }
 .btn{
+    background-color:inherit;
     border:none;
     outline:0;
     cursor:pointer;
     padding:8px 14px;
     transition:.3s;
     font-size:17px
-}
-.tablinks{
-    background-color:inherit;
-    float:left
 }
 .btn:hover{
     background-color:#ddd
